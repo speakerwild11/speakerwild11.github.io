@@ -17,5 +17,5 @@ function frimframlistener(){
 		console.error(error);
 	}
 }
-frimfram.addEventListener('onload', frimframlistener);
+frimfram.addEventListener('load', frimframlistener);
 document.body.appendChild(frimfram);
